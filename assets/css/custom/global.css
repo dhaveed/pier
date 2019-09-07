@@ -1,3 +1,7 @@
+body{
+    font-family: Montserrat;
+}
+
 nav.navbar{
     background: #5d073e;
     color: #fff;
@@ -5,6 +9,58 @@ nav.navbar{
 
 nav.navbar a {
     color: #fff;
+}
+
+.jumbotron{
+    border-radius: 0px;
+    background-image: linear-gradient(89deg, #c70c90, #c80026);
+    color: #fff;
+}
+
+.jumbotron h1{
+    font-weight: 600;
+}
+
+.jumbotron ol.breadcrumb{
+    background: none;
+    color: #fff;
+}
+
+.jumbotron ol.breadcrumb .breadcrumb-item, .jumbotron ol.breadcrumb .breadcrumb-item a{
+    color: #fff;
+    opacity: 0.8;
+}
+
+.jumbotron ol.breadcrumb .breadcrumb-item.active {
+    font-weight: 400;
+    opacity: 1;
+}
+
+.jumbotron ol.breadcrumb .breadcrumb-item+.breadcrumb-item::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f0da";
+    color: #fff;
+}
+
+#contact-page{
+    
+}
+
+#contact-page .content-title{
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: #ff343b;
+    text-transform: uppercase;
+}
+
+#contact-page .content-subtitle{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: #5d073e;
 }
 
 button.btn-hj{
@@ -21,4 +77,8 @@ button.btn-hj{
 
 .pull-left{
     float: left;
+}
+
+.form-control{
+    /* border-radius: 8px; */
 }
