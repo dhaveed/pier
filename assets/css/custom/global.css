@@ -96,6 +96,7 @@ button.btn-hj{
     background-image: linear-gradient(to right, #c80026, #c70c90);
     font-family: 'Source Sans Pro', sans-serif;
     padding:100px 0;
+    padding-top: 10px;
 }
 
 .hj-cta-flat .subtitle{
@@ -124,39 +125,44 @@ button.btn-hj{
     border-radius:30px;
 }
 
-/** CSS using pseudo-elements: **/
-
-#A {
-  background: #0074D9;
+.socials{
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    color: #fff;
+    font-weight:500;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    line-height: 90px;
 }
 
-#B {
-  background: #7FDBFF;
+.socials > i{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1em;
 }
 
-#A::after {
-  content: "";
-  position: relative;
-  left: -3rem;
-  /* padding * -1 */
-  top: calc( 3rem - 4rem / 2);
-  /* padding - height/2 */
-  float: left;
-  display: block;
-  height: 4rem;
-  width: 100vw;
-  background: hsla(0, 0%, 100%, 0.5);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 70 500 60' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='500' height='500' style='stroke: none; fill: %237FDBFF;' /%3E%3Cpath d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z' style='stroke: none; fill: %230074D9;'%3E%3C/path%3E%3C/svg%3E");
-  background-size: 100% 100%;
+.socials.social-facebook{
+    background: #1973af;
 }
 
-
-/** Cosmetics **/
-#A,
-#B {
-  padding: 3rem;
+.socials.social-instagram{
+    background: #470202;
 }
 
-#A {
-  color: white;
+.socials.social-twitter{
+    background: #2a6ff8;
+}
+
+footer .container{
+    text-align: center;
+}
+
+footer .container p span{
+    display: block;
+}
+
+.footer-link{
+    color: #ff4500;
 }
