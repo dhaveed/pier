@@ -7,6 +7,10 @@ nav.navbar{
     color: #fff;
 }
 
+nav.navbar li.nav-item{
+    margin: 0px 10px;
+}
+
 nav.navbar a {
     color: #fff;
 }
@@ -63,6 +67,11 @@ nav.navbar a {
     color: #5d073e;
 }
 
+#contact-page .contact-hotlines{
+    color: #707070;
+    font-weight: normal;
+}
+
 button.btn-hj{
     width: 150px;
     text-transform: uppercase;
@@ -81,4 +90,73 @@ button.btn-hj{
 
 .form-control{
     /* border-radius: 8px; */
+}
+
+.hj-cta-flat {
+    background-image: linear-gradient(to right, #c80026, #c70c90);
+    font-family: 'Source Sans Pro', sans-serif;
+    padding:100px 0;
+}
+
+.hj-cta-flat .subtitle{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(255,255,255, 0.8);
+}
+
+.list-inline li{
+    display: inline !important;
+    color: #fff !important;
+    margin: 0px 20px;
+    font-weight: normal;
+    font-family: Montserrat;
+    font-size: 18px;
+}
+
+.hj-cta-flat .hj-cta-box h2 {
+    color:#fff;
+    font-size:42px;
+    font-weight:900;
+}
+.hj-cta-flat .hj-cta-box .btn {
+    border-radius:30px;
+}
+
+/** CSS using pseudo-elements: **/
+
+#A {
+  background: #0074D9;
+}
+
+#B {
+  background: #7FDBFF;
+}
+
+#A::after {
+  content: "";
+  position: relative;
+  left: -3rem;
+  /* padding * -1 */
+  top: calc( 3rem - 4rem / 2);
+  /* padding - height/2 */
+  float: left;
+  display: block;
+  height: 4rem;
+  width: 100vw;
+  background: hsla(0, 0%, 100%, 0.5);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 70 500 60' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='500' height='500' style='stroke: none; fill: %237FDBFF;' /%3E%3Cpath d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z' style='stroke: none; fill: %230074D9;'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+
+/** Cosmetics **/
+#A,
+#B {
+  padding: 3rem;
+}
+
+#A {
+  color: white;
 }
