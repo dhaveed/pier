@@ -7,6 +7,10 @@ nav.navbar{
     color: #fff;
 }
 
+nav.navbar li.nav-item{
+    margin: 0px 10px;
+}
+
 nav.navbar a {
     color: #fff;
 }
@@ -63,6 +67,11 @@ nav.navbar a {
     color: #5d073e;
 }
 
+#contact-page .contact-hotlines{
+    color: #707070;
+    font-weight: normal;
+}
+
 button.btn-hj{
     width: 150px;
     text-transform: uppercase;
@@ -81,4 +90,79 @@ button.btn-hj{
 
 .form-control{
     /* border-radius: 8px; */
+}
+
+.hj-cta-flat {
+    background-image: linear-gradient(to right, #c80026, #c70c90);
+    font-family: 'Source Sans Pro', sans-serif;
+    padding:100px 0;
+    padding-top: 10px;
+}
+
+.hj-cta-flat .subtitle{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(255,255,255, 0.8);
+}
+
+.list-inline li{
+    display: inline !important;
+    color: #fff !important;
+    margin: 0px 20px;
+    font-weight: normal;
+    font-family: Montserrat;
+    font-size: 18px;
+}
+
+.hj-cta-flat .hj-cta-box h2 {
+    color:#fff;
+    font-size:42px;
+    font-weight:900;
+}
+.hj-cta-flat .hj-cta-box .btn {
+    border-radius:30px;
+}
+
+.socials{
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    color: #fff;
+    font-weight:500;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    line-height: 90px;
+}
+
+.socials > i{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1em;
+}
+
+.socials.social-facebook{
+    background: #1973af;
+}
+
+.socials.social-instagram{
+    background: #470202;
+}
+
+.socials.social-twitter{
+    background: #2a6ff8;
+}
+
+footer .container{
+    text-align: center;
+}
+
+footer .container p span{
+    display: block;
+}
+
+.footer-link{
+    color: #ff4500;
 }
