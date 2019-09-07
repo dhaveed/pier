@@ -1,0 +1,24 @@
+nav.navbar{
+    background: #5d073e;
+    color: #fff;
+}
+
+nav.navbar a {
+    color: #fff;
+}
+
+button.btn-hj{
+    width: 150px;
+    text-transform: uppercase;
+    border-radius: 27px;
+    box-shadow: 5px 5px 6px 0 #5d073e;
+}
+
+.btn-hj.btn-primary{
+    background: #5d073e;
+    border: 1px solid #5d073e;
+}
+
+.pull-left{
+    float: left;
+}
