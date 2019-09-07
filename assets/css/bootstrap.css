@@ -5089,6 +5089,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   background-color: #e9ecef;
   border-radius: 0.3rem;
 }
+.check{
+  width: 32.9px;
+  height: 27.9px;
+  object-fit: contain;
+}
 
 @media (min-width: 576px) {
   .jumbotron {
