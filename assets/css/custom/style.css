@@ -1,0 +1,56 @@
+.card-gg{
+  width: 316px;
+  height: 258px;
+  box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 0.2px #ffffff;
+  background-color: #ffffff;
+  margin: auto;
+  margin-bottom: 10px!important;
+}
+.card-body, .my-4{
+    width:98px;
+    height:98px;
+    margin: auto; 
+    margin-top: 30px;
+}
+
+.my-4{
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 0%; 
+}
+
+.second-section{
+  background-color: #f6f6f6;
+  padding-bottom: 30px;  
+
+}
+.third-section{
+  margin: auto;
+  margin-top: 20px; 
+}
+.team-names{
+  padding: 30px; 
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5d073e;
+}
+.team-img{
+  width:50px;
+  height:50px;
+}
+.fouth-section{
+  margin-top: 50px;
+}
+.fouth-img{
+  margin-top: 50px;
+}
