@@ -213,7 +213,7 @@ body.modal-open .background-container{
 .blog-post {
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .09);
     /* border: none; */
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 30px auto;
 }
 
@@ -229,8 +229,8 @@ body.modal-open .background-container{
 
 .blog-post .blog-footer{
     background: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .blog-post .blog-footer .post-author{
@@ -265,4 +265,23 @@ button#browse-search-btn{
     box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.16);
     background: #c80026 !important;
     border: none;
+}
+
+.browse-widget .categories li a{
+    color: #000;
+    font-size: 20px;
+}
+
+.browse-widget .categories li.category-item{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.browse-widget .categories li.category-item i{
+    color: #757575;
+    padding-right: 10px;
+}
+
+.browse-widget .categories li.category-item.active a, .browse-widget .categories li.category-item.active i{
+    color: #c80026 !important;
 }
