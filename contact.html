@@ -19,7 +19,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg static-top">
+    <nav class="navbar navbar-expand-lg static-top background-container">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./assets/images/logo.png" style="width: 50%;" alt="">
@@ -33,22 +33,23 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="./about.html">About Us</a>
                     </li>
-         <!-- Navigation -->
-               <li class="nav-item">
-                        <a class="nav-link" href="#">Browse</a>
+                    <!-- Navigation -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./browse.html">Browse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us
+                        <a class="nav-link" href="./contact.html">Contact Us
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#authModal"
+                            data-whatever="sign-in">
                             <i class="fas fa-user"></i>
                             User
                         </a>
@@ -59,7 +60,7 @@
     </nav>
 
     <!-- Page Content -->
-    <main role="main" id="contact-page">
+    <main role="main" id="contact-page" class="background-container">
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">Contact</h1>
@@ -149,7 +150,7 @@
         <path d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z' style='stroke: none; fill: #FFFFFF;'></path>
     </svg>
 
-    <section class="hj-cta-flat">
+    <section class="hj-cta-flat background-container">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -182,7 +183,7 @@
                         <i class="fab fa-instagram"></i>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col col-lg-4 col-sm-6 col-sm-offset-3">
                     <div class="socials social-twitter">
                         <i class="fab fa-twitter"></i>
                     </div>
@@ -191,7 +192,7 @@
         </div>
     </section>
 
-    <footer class="footer py-3">
+    <footer class="footer py-3 background-container">
         <div class="container">
             <p class="text-muted">
                 <span>
@@ -204,10 +205,86 @@
         </div>
     </footer>
 
+    <!-- MODALS -->
+    <!-- MODALS: SIGN IN -->
+    <div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="authModalTitle">Log in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body container">
+                    <!-- <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form> -->
+
+                    <h2>Modal Body</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// MODALS: SIGN IN-->
+    <!--// MODALS -->
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('#authModal').on('show.bs.modal', function (event) {
+                $('body').addClass("auth-modal-active");
+                var trigger = $(event.relatedTarget) // Button that triggered the modal
+                var mode = trigger.data('whatever') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+
+                signInForm = `
+                    <form id="login-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="form-row align-items-center">
+                            <div class="col-auto my-1 pull-right">
+                                <button type="submit" class="btn btn-primary btn-hj">Login</button>
+                            </div>
+                            <div class="col-auto my-1 pull-right" style="position: absolute; right: 40px;">
+                                <a href="#"><span>Forgot Password</span></a>
+                            </div>
+                        </div>
+                    </form>
+                `;
+
+                if (mode === "sign-in") {
+                    modal.find('.modal-body').html(signInForm);
+                } else {
+                    modal.find('.modal-body').text(mode)
+                    modal.find('.modal-body input').val(mode)
+                }
+                console.log('triggered');
+            });
+
+            $('#authModal').on('hide.bs.modal', function (event) {
+                $('body').removeClass("auth-modal-active");
+            });
+        })
+    </script>
 
 </body>
 
