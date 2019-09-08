@@ -285,3 +285,38 @@ button#browse-search-btn{
 .browse-widget .categories li.category-item.active a, .browse-widget .categories li.category-item.active i{
     color: #c80026 !important;
 }
+
+.blog-sidebar .posts-widget{
+    position: relative;
+}
+
+.blog-sidebar .posts-widget .sidebar-post .post-title{
+    font-weight: bold;
+    /* font-size: 16px; */
+}
+
+.blog-sidebar .posts-widget .sidebar-post .post-type{
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+
+.blog-sidebar .posts-widget .sidebar-post .post-impressions .points, .blog-sidebar .posts-widget .sidebar-post .post-impressions .comments {
+    display: inline-block;
+    font-size: 14px;
+    color: #707070
+}
+
+.blog-sidebar .posts-widget .sidebar-post .post-impressions .comments{
+    color: #ff4500;
+    float: right;
+    font-weight: bold;
+}
+
+.blog-sidebar .posts-widget .view-all a{
+    text-decoration: underline;
+    color: #ff4500;
+}
+
+.blog-sidebar .posts-widget .view-all span{
+    color: #ff4500;
+}
