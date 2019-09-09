@@ -31,7 +31,7 @@
                         <i class="fas fa-bars"></i>
                     </span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse mt-lg-0 mt-md-0 mt-3" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="./index.html">Home</a>
@@ -56,9 +56,9 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#authModal"
-                                data-whatever="sign-in">Login</a>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#authModal"
-                                data-whatever="sign-up">Register</a>
+                                    data-mode="sign-in">Login</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#regModal"
+                                    data-mode="sign-up">Register</a>
                             </div>
                         </li>
                     </ul>
@@ -227,25 +227,97 @@
                     </button>
                 </div>
                 <div class="modal-body container">
-                    <!-- <form>
+                    <form id="login-form">
                         <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Email Address">
                         </div>
                         <div class="form-group">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Password">
                         </div>
-                    </form> -->
-
-                    <h2>Modal Body</h2>
+                        <div class="form-row align-items-center">
+                            <div class="col-auto my-1 pull-right">
+                                <button type="submit" class="btn btn-primary btn-hj">Login</button>
+                            </div>
+                            <div class="col-auto my-1 pull-right modal-link" style="position: absolute; right: 40px;">
+                                <a id="reset-password" data-toggle="modal" data-target="#resetModal"
+                                    data-dismiss="modal">
+                                    <span>Forgot Password</span>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     <!--// MODALS: SIGN IN-->
 
-    <!-- MODALS: SIGN IN -->
+    <!-- MODALS: SIGN UP -->
+    <div class="modal fade authModal" id="regModal" tabindex="-1" role="dialog" aria-labelledby="authModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="authModalTitle">Sign Up!!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body container">
+                    <form id="signUp-form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name"
+                                    name="firstName">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name"
+                                    name="lastName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Email Address">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Phone Number"
+                                    name="phone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="inputReferralLink"
+                                    placeholder="Referral Link" name="referralLink">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" id="password2" name="password2"
+                                    placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center">
+                            <div class="col-auto my-1 pull-right">
+                                <button type="submit" class="btn btn-primary btn-hj">Login</button>
+                            </div>
+                            <div class="col-auto my-1 pull-right modal-link" style="position: absolute; right: 40px;">
+                                <a href="#" data-dismiss="modal" id="sign-in" data-toggle="modal"
+                                    data-target="#authModal" data-mode="sign-in"><span>Sign In</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// MODALS: SIGN UP-->
+
+    <!-- MODALS: RESET PASSWORD -->
     <div class="modal fade authModal" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="resetModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -276,7 +348,7 @@
             </div>
         </div>
     </div>
-    <!--// MODALS: SIGN IN-->
+    <!--// MODALS: RESET PASSWORD-->
     <!--// MODALS -->
 
 
@@ -286,9 +358,12 @@
 
     <script type="text/javascript">
         $(document).ready(() => {
+
+            //tryouts
+
             $('#authModal').on('show.bs.modal', function (event) {
                 var trigger = $(event.relatedTarget)
-                var mode = trigger.data('whatever')
+                var mode = trigger.data('mode')
                 var modal = $(this)
 
                 signInForm = `
@@ -346,7 +421,7 @@
                                 <button type="submit" class="btn btn-primary btn-hj">Login</button>
                             </div>
                             <div class="col-auto my-1 pull-right modal-link" style="position: absolute; right: 40px;">
-                                <a id="reset-password"><span>Forgot Password</span></a>
+                                <a href="#" data-dismiss="modal" id="sign-in" data-toggle="modal" data-target="#authModal" data-mode="sign-in"><span>Sign In</span></a>
                             </div>
                         </div>
                     </form>
@@ -358,11 +433,17 @@
                 } else if (mode === "sign-up") {
                     modal.find('.modal-body').html(signUpForm);
                     modal.find('.modal-header .modal-title').text('Sign Up!!!');
+                    $('#sign-in').on('click', () => {
+                        $("#authModal").on("hidden.bs.modal", function () {
+                            modal.find('.modal-header .modal-title').text('Login');
+                            $("#authModal .modal-body").html(signInForm);
+                            $('#authModal').modal('show');
+                        });
+                    })
                 } else {
                     modal.find('.modal-body').text(mode)
                     modal.find('.modal-body input').val(mode)
                 }
-                console.log('triggered');
             });
         })
     </script>
