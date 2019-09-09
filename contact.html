@@ -48,18 +48,18 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#authModal"
-                                data-whatever="sign-in">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-user"></i>
                                 User
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#authModal"
-                                data-whatever="sign-up">
-                                Reg
-                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#authModal"
+                                data-whatever="sign-in">Login</a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#authModal"
+                                data-whatever="sign-up">Register</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -264,7 +264,8 @@
                         </div>
                         <div class="form-row align-items-center mt-5">
                             <div class="col-auto my-1 pull-right">
-                                <button type="submit" class="btn btn-primary btn-hj" style="text-transform: none;">Retrieve</button>
+                                <button type="submit" class="btn btn-primary btn-hj"
+                                    style="text-transform: none;">Retrieve</button>
                             </div>
                         </div>
                         <p class="mt-4">
