@@ -197,8 +197,16 @@ body.modal-open .background-container{
     border-bottom: none;
 }
 
+#authModal .modal-content{
+    padding: 25px 10px;
+}
+
 #authModal .modal-body {
     padding: 1rem 3rem;
+}
+
+#authModal .modal-link a{
+    color: #5d073e;
 }
 
 .blog-img {
@@ -331,3 +339,4 @@ button#browse-search-btn{
     width: 50px;
     text-align: center;
 }
+
