@@ -254,13 +254,17 @@ input#browse-search-input{
     border: none;
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
-    z-index: -1;
+}
+
+input#browse-search-input:focus{
+    z-index: inherit;
 }
 
 button#browse-search-btn{
     box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.16);
     background: #c80026 !important;
     border: none;
+    z-index: 2;
 }
 
 .browse-widget .categories li a{
