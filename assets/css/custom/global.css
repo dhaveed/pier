@@ -10,7 +10,9 @@ nav.navbar{
 nav.navbar li.nav-item{
     margin: 0px 10px;
 }
-
+.navbar-brand{
+    max-width: 80%;
+}
 nav.navbar a {
     color: #fff;
 }
