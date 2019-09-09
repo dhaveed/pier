@@ -182,7 +182,7 @@ body.modal-open .background-container{
     filter: blur(4px);
 }
 
-#authModalTitle{
+#authModalTitle, #resetModalTitle{
     margin-left: auto;
     font-family: Montserrat;
     font-weight: bold;
@@ -197,15 +197,15 @@ body.modal-open .background-container{
     border-bottom: none;
 }
 
-#authModal .modal-content{
+.authModal .modal-content{
     padding: 25px 10px;
 }
 
-#authModal .modal-body {
+.authModal .modal-body {
     padding: 1rem 3rem;
 }
 
-#authModal .modal-link a{
+.authModal .modal-link a{
     color: #5d073e;
 }
 
